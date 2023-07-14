@@ -1,7 +1,7 @@
 import streamlit as st 
 
 def display_text():
-    title = st.text_input('Movie title', 'Life of Pie')
+    title = st.text_input('Movie titles', 'Life of Pie')
     result = st.write('The current movie title is', title)
     return result
 
