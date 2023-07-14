@@ -8,4 +8,4 @@ def display_text():
     
 
 if __name__ == "__main__":
-    display_text()    
+    display_text()     
