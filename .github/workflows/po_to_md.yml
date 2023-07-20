@@ -19,4 +19,5 @@ jobs:
 
     - name: Convert PO to Markdown
       run: |
+        mkdir -p md_files
         po4a-translate -f text -m po_files/test1.po -p md_files/test.md -M utf-8
