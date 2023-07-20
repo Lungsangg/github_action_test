@@ -19,4 +19,4 @@ jobs:
 
     - name: Convert PO to Markdown
       run: |
-        msgcat ../po_files/cefr-bo_linguistic-grammatical-accuracy_endocx_en.po > test.md
+        msgcat po_files/test1.po > md_files/test.md
