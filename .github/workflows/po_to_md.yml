@@ -24,4 +24,4 @@ jobs:
 
     - name: Convert PO to Markdown
       run: |
-        polib -t markdown ../po_files/cefr-bo_linguistic-grammatical-accuracy_endocx_en.po > ../md_files/test.md
+        polib -t markdown cefr-bo_linguistic-grammatical-accuracy_endocx_en.po > test.md
