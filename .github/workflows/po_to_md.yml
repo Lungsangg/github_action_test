@@ -1,23 +1,22 @@
 name: Convert PO to Markdown
+
 on:
   push:
     branches:
-      - main
+      - main 
 
 jobs:
-  convert_po_to_md:
+  convert:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Check out code
+        uses: actions/checkout@v2
 
-    - name: Install po4a
-      run: |
-        sudo apt-get update -y
-        sudo apt-get install -y po4a
+      - name: Install mdpo
+        run: |
+          pip install mdpo
 
-    - name: Convert PO to Markdown
-      run: |
-        mkdir -p md_files
-        po4a-translate -f text -m po_files/test1.po -p md_files/test.md -M utf-8
+      - name: Convert PO to MD
+        run: |
+          mdpo convert po_files/test1.po md_files/test.md
