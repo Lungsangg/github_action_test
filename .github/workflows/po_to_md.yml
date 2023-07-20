@@ -12,16 +12,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Setup Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.x' # Replace 'x' with the appropriate Python version you need.
-
-    - name: Install dependencies
+    - name: Install gettext
       run: |
-        pip install polib
-        pip install polib[cli]
+        sudo apt-get update -y
+        sudo apt-get install -y gettext
 
     - name: Convert PO to Markdown
       run: |
-        polib -t markdown cefr-bo_linguistic-grammatical-accuracy_endocx_en.po > test.md
+        msgcat cefr-bo_linguistic-grammatical-accuracy_endocx_en.po > test.md
